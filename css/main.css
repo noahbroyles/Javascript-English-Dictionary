@@ -1,0 +1,131 @@
+body {
+    background-color: hsl(0,0%,16%); /* Straight from youtube lol */
+    color: #d3d3d3;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+}
+
+h1 {
+    text-align: center;
+}
+
+#word-box {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid lightslategray;
+    font-size: 20pt;
+    background-color: hsl(0, 0%, 16%);
+    color: #d3d3d3;
+    width: 40%;
+}
+
+#word-box:focus {
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    font-size: 18pt;
+    border-radius: .3em;
+}
+
+button:hover {
+    background-color: lightslategrey;
+}
+
+.audio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+audio:focus {
+    outline: none;
+}
+
+.pronunciation {
+    text-decoration: italic;
+    font-size: small;
+    margin-top: -20px;
+}
+
+.toph1 {
+    margin-bottom: 40px;
+}
+
+.meaning {
+    margin-bottom: 3em;
+}
+
+.examples {
+    list-style-type: circle;
+}
+
+.example {
+    font-size: 12pt;
+    font-style: italic;
+}
+
+.origin {
+    font-size: 15pt;
+}
+
+.definition {
+    margin-left: 10px;
+    margin-bottom: 2em;
+} 
+
+.synonym {
+    cursor: pointer;
+}
+
+.synonym:hover {
+    color: rgb(230, 195, 150);
+}
+
+.collapsable {
+    cursor: pointer;
+}
+
+.collapsable:hover {
+    color: #d3d3d3;
+}
+
+.input-box {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.meaning h2 {
+    color: rgb(230, 195, 150);
+}
+
+.info {
+    width: 70%;
+    margin-left: 15%;
+    line-height: 2em;
+    letter-spacing: .08em;
+    font-size: 16pt;
+}
+
+.center-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+a {
+    color: rgb(230, 195, 150);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:visited {
+    color: rgb(230, 195, 150);
+}
+
+a:hover {
+    color: #d3d3d3;
+}
