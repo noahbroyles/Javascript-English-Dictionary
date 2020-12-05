@@ -22,7 +22,7 @@ if (isset($_POST["word"])) {
 $db->query("SET time_zone = '-5:00';");
 $db->query(
     "INSERT INTO tDictionary (WordLookedUp, IPAddress) VALUES (?, ?)",
-    [$ip, $word]
+    [$word, $ip]
 );
 
 $db->close();
