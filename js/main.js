@@ -9,16 +9,12 @@
 
 'use strict';
 
-function logLookup(word, ip) {
+function logWordLookup(word) {
     $.ajax({
         url: "https://homepages.uc.edu/~broylend/javascript/dictionary-final/dictlog.php",
         type: "POST",
-        data: {word: word, ip: ip}
+        data: {word: word}
     });
-}
-
-function getIPFromAmazon(word) {
-    fetch("https://cors-anywhere.herokuapp.com/https://checkip.amazonaws.com/").then(res => res.text()).then(data => logLookup(word, data));
 }
 
 function lookupWord (word) {
@@ -26,7 +22,7 @@ function lookupWord (word) {
         word = $("#word-box").val();
     }
 
-    getIPFromAmazon(word);
+    logWordLookup(word);
 
     let html = ``;
     $('.results').html(html); // clear previous results

@@ -9,8 +9,11 @@ try {
     die($e);
 }
 
-if (isset($_POST["ip"]) and isset($_POST["word"])) {
-    $ip = str_replace("\n", "", $_POST["ip"]);
+if (isset($_POST["word"])) {
+    $ip = $_SERVER['REMOTE_ADDR'];
+    if (array_key_exists('HTTP_X_FORWARDED_FOR', $_SERVER)) {
+        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+    }
     $word = $_POST["word"];
 } else {
     die();
