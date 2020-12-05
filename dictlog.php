@@ -14,7 +14,7 @@ if (isset($_POST["word"])) {
     if (array_key_exists('HTTP_X_FORWARDED_FOR', $_SERVER)) {
         $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
     }
-    $word = $_POST["word"];
+    $word = htmlspecialchars(strtolower($_POST["word"]));
 } else {
     die();
 }
