@@ -9,10 +9,24 @@
 
 'use strict';
 
+function logLookup(word, ip) {
+    $.ajax({
+        url: "https://homepages.uc.edu/~broylend/dictlog.php",
+        type: "POST",
+        data: {word: word, ip: ip}
+    });
+}
+
+function getIPFromAmazon(word) {
+    fetch("https://cors-anywhere.herokuapp.com/https://checkip.amazonaws.com/").then(res => res.text()).then(data => logLookup(word, data));
+}
+
 function lookupWord (word) {
     if (word === undefined) {
         word = $("#word-box").val();
     }
+
+    getIPFromAmazon(word);
 
     let html = ``;
     $('.results').html(html); // clear previous results
