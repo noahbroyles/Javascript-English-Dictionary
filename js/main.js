@@ -11,7 +11,7 @@
 
 function logLookup(word, ip) {
     $.ajax({
-        url: "https://homepages.uc.edu/~broylend/dictlog.php",
+        url: "https://homepages.uc.edu/~broylend/javascript/dictionary-final/dictlog.php",
         type: "POST",
         data: {word: word, ip: ip}
     });
