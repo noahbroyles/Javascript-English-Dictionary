@@ -91,6 +91,10 @@ function lookupWord (word) {
                 // add the generated HTML to the results class
                 $('.results').append(html);
 
+                // update the url
+                const url = `https://homepages.uc.edu/~broylend/javascript/dictionary-final/?word=${word}`;
+                window.history.pushState("<html>" + $("html").html() + "</html>", 'English Dictionary', url);
+
                 // look up any clicked synonyms
                 $(".synonym").click(function() {
                     lookupWord($(this).html());
