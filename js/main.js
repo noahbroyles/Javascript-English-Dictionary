@@ -139,7 +139,7 @@ $(document).ready(function () {
     const word = urlParams.get("word");
 
     if (word !== null) {
-        $("$word-box").val(word);
+        $("#word-box").val(word);
         lookupWord(word);
     }
 
