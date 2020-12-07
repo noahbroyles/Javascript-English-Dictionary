@@ -133,5 +133,14 @@ $(document).ready(function () {
             lookupWord();
         }
     });
+
+    const qs = window.location.search;
+    const urlParams = new URLSearchParams(qs);
+    const word = urlParams.get("word");
+
+    if (word !== null) {
+        lookupWord(word);
+    }
+
     $('#word-box').focus();
 });
